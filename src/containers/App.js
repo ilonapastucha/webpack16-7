@@ -9,6 +9,8 @@ import TodoList from '../components/TodoList';
 class App extends React.Component {
     constructor(props){
         super(props);
+        this.addTodo = this.addTodo.bind(this);
+        this.removeTodo = this.removeTodo.bind(this);
         this.state = {
             data: []
         };

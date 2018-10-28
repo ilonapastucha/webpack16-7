@@ -17,7 +17,7 @@
     "watch:sassprefixer": "onchange sass/*.scss -- npm-run-all build:sass -p build:autoprefixer",
     "watch:browsersync": "browser-sync start --server --files css/*.css *.html",
     "start": "babel script.js --watch --out-file script-compiled.js",
-    "start-app": "babel components/app.js --watch --out-file app-compiled.js",
+    "start-app": "babel components/Title.js --watch --out-file app-compiled.js",
     "start-gif": "babel components/gif.js --watch --out-file gif-compiled.js",
     "start-search": "babel components/search.js --watch --out-file search-compiled.js",
     "webpack:dev": "webpack-dev-server --hot --env development",

@@ -5,12 +5,16 @@ import PropTypes from 'prop-types';
 class Todo extends React.Component {
   constructor(props) {
     super(props);
+    this.showHandle = this.showHandle.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
     this.state = {
       updatedText: '',
       showText: true,
       showInput: false
     }
   }
+
   showHandle ()  {
     const { showText, showInput } = this.state;
     this.setState({
@@ -18,10 +22,12 @@ class Todo extends React.Component {
       showInput: !showInput
     })
   }
+
   handleOnChange (event)  {
     const updatedText = event.target.value;
     this.setState({updatedText});
   }
+
   handleKeyUp (event)  {
     const updatedText = this.state.updatedText;
     if (event.keyCode === 13 &&  updatedText !== '') {

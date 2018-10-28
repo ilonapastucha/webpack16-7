@@ -5,9 +5,11 @@ import style from './TodoForm.css';
 
 class TodoForm extends React.Component {
     constructor(props) {
-    super(props);
-    this.state = {
-      text: ''
+      super(props);
+      this.handleOnChange = this.handleOnChange.bind(this);
+      this.handleKeyUp = this.handleKeyUp.bind(this);
+      this.state = {
+        text: ''
     }
   }
   handleOnChange (event) {
