@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './TodoForm.css';
 
-
 class TodoForm extends React.Component {
     constructor(props) {
       super(props);
@@ -12,10 +11,12 @@ class TodoForm extends React.Component {
         text: ''
     }
   }
+
   handleOnChange (event) {
     const newToDo = event.target.value;
     this.setState({text: newToDo});
   }
+
   handleKeyUp (event) {
     const newToDo = this.state.text;
     if (event.keyCode === 13 && newToDo !== '') {
@@ -23,6 +24,7 @@ class TodoForm extends React.Component {
       this.setState({text: ''})
     }
   }
+
   render() {
     return (
       <div className={style.TodoForm}>
@@ -37,6 +39,7 @@ class TodoForm extends React.Component {
       </div>
     );
   }
+  
 }
 
 TodoForm.propTypes = {
